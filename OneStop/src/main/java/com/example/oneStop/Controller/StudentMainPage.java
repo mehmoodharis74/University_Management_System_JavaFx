@@ -9,8 +9,18 @@ import javafx.scene.layout.VBox;
 
 public class StudentMainPage extends OneStop {
     @FXML
-    Button logoutButton, applyForDegreeBtn, applyForComplainBtn, trackActivityBtn, viewDegreeBtn, applyForTranscriptBtn, viewTranscriptBtn;
-@FXML
+    Button logoutButton;
+    @FXML
+    Button applyForDegreeBtn;
+    @FXML
+    Button applyForComplainBtn;
+    @FXML
+    Button trackActivityBtn;
+    @FXML
+    Button viewDegreeBtn;
+    @FXML
+    Button applyForTranscriptBtn;
+    @FXML
 Label navName;
 @FXML
     VBox findDegreeVBox,ActivityTrackingVBox,ApplyForDegreeVBox;
@@ -30,14 +40,7 @@ Label navName;
             findDegreeVBox.setDisable(true);
             ActivityTrackingVBox.setDisable(true);
         }
-        if(isDegreeSaved(String.valueOf(Constants.CURRENT_USER_ID))){
-            findDegreeVBox.setDisable(false);
-        }
-        else{
-            findDegreeVBox.setDisable(true);
-        }
-//        ApplyForDegreeVBox.setDisable(false);
-//        ActivityTrackingVBox.setDisable(true);
+        findDegreeVBox.setDisable(!isDegreeSaved(String.valueOf(Constants.CURRENT_USER_ID)));
     }
 
 }

@@ -2,7 +2,6 @@ package com.example.oneStop.Controller;
 
 import com.example.oneStop.Classes.OneStop;
 import com.example.oneStop.Constants.Constants;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
@@ -26,7 +25,7 @@ Button logoutButton, SubmitDegreeBtn;
             degree_studentID.setText(Constants.CURRENT_USER_ID.toString());
         }
     }
-    public void SubmitDegreeBtn_onAction(ActionEvent actionEvent)  {
+    public void SubmitDegreeBtn_onAction()  {
         if(validInputs()){
             submit_degree_request(degree_studentName.getText(),degree_studentFname.getText(),degree_studentAddress.getText(),
                     degree_studentEmail.getText(),degree_major.getText(),degree_campus.getText(),degree_cgpa.getText());

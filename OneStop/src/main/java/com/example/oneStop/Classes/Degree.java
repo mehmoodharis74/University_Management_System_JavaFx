@@ -24,39 +24,16 @@ public class Degree {
         return studentName;
     }
 
-    public void setStudentId(int studentId) {
-        this.studentId = studentId;
-    }
-
     public int getAdminId() {
         return adminId;
-    }
-
-    public void setAdminId(int adminId) {
-        this.adminId = adminId;
     }
 
     public String getDegreeName() {
         return degreeName;
     }
 
-    public void setDegreeName(String degreeName) {
-        this.degreeName = degreeName;
-    }
-
-    public String getIssueDate() {
-        return issueDate;
-    }
-
-    public void setIssueDate(String issueDate) {
-        this.issueDate = issueDate;
-    }
-
     public String getDegreeLocation() {
         return degreeLocation;
     }
 
-    public void setDegreeLocation(String degreeLocation) {
-        this.degreeLocation = degreeLocation;
-    }
 }

@@ -113,7 +113,7 @@ public class database extends OneStop {
             PreparedStatement st = connection.prepareStatement("select * from degree WHERE studentId= '"+sid+"'");
             ResultSet rs = st.executeQuery();
             if(rs.next())
-            return true;
+                return true;
         } catch (SQLException e) {
             return false;
             //throw new RuntimeException(e);

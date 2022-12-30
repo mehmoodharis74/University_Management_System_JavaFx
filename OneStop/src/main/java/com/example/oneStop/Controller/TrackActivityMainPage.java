@@ -38,7 +38,7 @@ public class TrackActivityMainPage extends OneStop {
     @FXML
     Label HOD_sig_label;
 
-    private static database db;
+    private static final database db;
 
     static {
         try {
@@ -51,7 +51,7 @@ public class TrackActivityMainPage extends OneStop {
     public void initialize() {
         if (!Constants.CURRENT_USER_NAME.isEmpty())
             navName.setText(Constants.CURRENT_USER_NAME);
-        String query = "";
+        String query;
         query = "SELECT * FROM request WHERE StudentId = " + Constants.CURRENT_USER_ID;
         ResultSet rs = db.executeQuery(query);
         try {
@@ -62,7 +62,7 @@ public class TrackActivityMainPage extends OneStop {
                     R_completion_time.setText(rs.getString("E_Time"));
                 }
                 else
-                R_completion_time.setText("Not Completed Yet");
+                    R_completion_time.setText("Not Completed Yet");
                 RStatus_label.setText(rs.getString("RStatus"));
                 RTrack_label.setText(rs.getString("Track"));
                 if(rs.getString("Decision_finance") == null)

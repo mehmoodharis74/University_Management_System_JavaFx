@@ -4,7 +4,6 @@ import com.example.oneStop.Classes.OneStop;
 import com.example.oneStop.Classes.database;
 import com.example.oneStop.Constants.Constants;
 import javafx.collections.FXCollections;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
@@ -32,13 +31,11 @@ public class ComplainMainPage extends OneStop {
     TextField complainStudentNameLabel;
 
 
-    public void submitComplainButton_onAction(ActionEvent actionEvent) {
-    }
 
     @FXML
     ComboBox<String> complain_combobox;
 
-    private String users[] = {"SelectAll", "Name", "Campus", "Degree"};
+    private final String[] users = {"SelectAll", "Name", "Campus", "Degree"};
 
     public void initialize() {
         if(!Constants.CURRENT_USER_NAME.isEmpty())
@@ -48,7 +45,7 @@ public class ComplainMainPage extends OneStop {
         complainStudentNameLabel.setText(Constants.CURRENT_USER_NAME);
         complain_combobox.setValue(users[0]);
     }
-    private static database db;
+    private static final database db;
 
     static {
         try {
@@ -59,8 +56,8 @@ public class ComplainMainPage extends OneStop {
     }
 
 
-    public void submitComplainButton_onActionButton_onAction(ActionEvent actionEvent) {
-        String query = "";
+    public void submitComplainButton_onActionButton_onAction() {
+        String query;
         String name = firstTextID.getText().toUpperCase();
         String campus = secondTextID.getText().toUpperCase();
         String degree = thirdTextID.getText().toUpperCase();
@@ -95,26 +92,26 @@ public class ComplainMainPage extends OneStop {
         alert.showAndWait();
     }
 
-    public void complainComboBox_btn(ActionEvent actionEvent) {
-        if(complain_combobox.getValue().toString() == "Name"){
+    public void complainComboBox_btn() {
+        if(complain_combobox.getValue().equals("Name")){
             firstTextID.setVisible(true);
             firstTextID.setPromptText("Enter Your Name");
             secondTextID.setVisible(false);
             thirdTextID.setVisible(false);
         }
-        if(complain_combobox.getValue().toString() == "Degree"){
+        if(complain_combobox.getValue().equals("Degree")){
             firstTextID.setVisible(true);
             firstTextID.setPromptText("Enter Degree");
             secondTextID.setVisible(false);
             thirdTextID.setVisible(false);
         }
-        if(complain_combobox.getValue().toString() == "Campus"){
+        if(complain_combobox.getValue().equals("Campus")){
             firstTextID.setVisible(true);
             firstTextID.setPromptText("Enter Campus");
             thirdTextID.setVisible(false);
             secondTextID.setVisible(false);
         }
-        if(complain_combobox.getValue().toString() == "SelectAll"){
+        if(complain_combobox.getValue().equals("SelectAll")){
             firstTextID.setVisible(true);
             firstTextID.setPromptText("Enter Your Name");
             secondTextID.setVisible(true);

@@ -22,15 +22,11 @@ public class TranscriptPage extends OneStop {
 
     @FXML
     Label navName;
-   // @FXML
-  //  TableColumn<Transcript_SemesterRecord,String> credits,grades,points,courses;
-    @FXML
-    TableView<Transcript_SemesterRecord> transcriptTable;
     @FXML
     ScrollPane mainScrollPane;
 
     String maxQuery ="select max(sem_number) as max from transcript t inner join transcript_semester s on t.tid=s.transcriptId where studentID='"+Constants.CURRENT_USER_ID+"'";
-    private static database db;
+    private static final database db;
 
     static {
         try {
@@ -75,10 +71,10 @@ public class TranscriptPage extends OneStop {
             TableColumn<Transcript_SemesterRecord, String> points = new TableColumn<>("Points");
             TableColumn<Transcript_SemesterRecord, String> courses = new TableColumn<>("Grade");
 
-            credits.setCellValueFactory(new PropertyValueFactory<Transcript_SemesterRecord,String>("credits"));
-            grades.setCellValueFactory(new PropertyValueFactory<Transcript_SemesterRecord,String>("grades"));
-            points.setCellValueFactory(new PropertyValueFactory<Transcript_SemesterRecord,String>("points"));
-            courses.setCellValueFactory(new PropertyValueFactory<Transcript_SemesterRecord,String>("courses"));
+            credits.setCellValueFactory(new PropertyValueFactory<>("credits"));
+            grades.setCellValueFactory(new PropertyValueFactory<>("grades"));
+            points.setCellValueFactory(new PropertyValueFactory<>("points"));
+            courses.setCellValueFactory(new PropertyValueFactory<>("courses"));
 
             //add columns to table
             table.getColumns().addAll(credits,grades,points,courses);

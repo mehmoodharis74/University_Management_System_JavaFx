@@ -2,7 +2,6 @@ package com.example.oneStop.Controller;
 
 import com.example.oneStop.Classes.OneStop;
 import javafx.collections.FXCollections;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
@@ -15,15 +14,15 @@ public class LoginPage extends OneStop {
     @FXML TextField login_email_input_field, login_password_input_field;
     @FXML ComboBox<String> user_choice_box;
 
-    private String users[] = {"Student", "Admin", "FypCommittee", "FinanceCommittee", "Director"};
+    private final String[] users = {"Student", "Admin", "FypCommittee", "FinanceCommittee", "Director"};
 
     public void initialize() {
         user_choice_box.setItems(FXCollections.observableArrayList(users));
     }
-      public void selectUserAction(ActionEvent actionEvent) {
-          user_choice_box.setPromptText(user_choice_box.getValue().toString());
+      public void selectUserAction() {
+          user_choice_box.setPromptText(user_choice_box.getValue());
       }
-    public void loginBtn_onAction(ActionEvent actionEvent){
+    public void loginBtn_onAction(){
         if(validDataInput()) {
             if(verifyUserLogin(login_email_input_field.getText(), login_password_input_field.getText(), user_choice_box.getValue())){
                 if(user_choice_box.getValue().equals("Student")){

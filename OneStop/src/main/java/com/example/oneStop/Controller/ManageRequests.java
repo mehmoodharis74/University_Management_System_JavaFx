@@ -46,10 +46,10 @@ public class ManageRequests extends OneStop {
     @FXML
     Button issueDegreeButton, issueTranscriptButton;
 
-    private String users[] = {"All Requests", "Pending", "Approved", "Rejected"};
+    private final String[] users = {"All Requests", "Pending", "Approved", "Rejected"};
 
 
-    private static database db;
+    private static final database db;
 
     static {
         try {
@@ -90,7 +90,7 @@ public class ManageRequests extends OneStop {
 public boolean validToken(String token){
         return db.checkToken(token);
 }
-    public void req_DetailsBtn(ActionEvent actionEvent) {
+    public void req_DetailsBtn() {
         //check tokenInput is integer or not
        if(validToken(tokenInput.getText())){
                     Constants.token_id = tokenInput.getText();
@@ -106,8 +106,6 @@ public boolean validToken(String token){
                     alert.showAndWait();
                 }
 
-       /* Constants.token_id =tokenInput.getText();
-        pageLoader("requestDetails_main_page.fxml");*/
     }
 
     public void initialize()  {
@@ -140,11 +138,11 @@ public boolean validToken(String token){
         //setting name in nav bar to current user
         if(!Constants.CURRENT_USER_NAME.isEmpty())
             navName.setText(Constants.CURRENT_USER_NAME);
-        tokenId.setCellValueFactory(new PropertyValueFactory<Requests,Integer>("tokenId"));
-        studentId.setCellValueFactory(new PropertyValueFactory<Requests,Integer>("studentId"));
-        requestName.setCellValueFactory(new PropertyValueFactory<Requests,String>("requestName"));
-        requestDegree.setCellValueFactory(new PropertyValueFactory<Requests,String>("requestDegree"));
-        degreeIssued.setCellValueFactory(new PropertyValueFactory<Requests,String>("degreeIssued"));
+        tokenId.setCellValueFactory(new PropertyValueFactory<>("tokenId"));
+        studentId.setCellValueFactory(new PropertyValueFactory<>("studentId"));
+        requestName.setCellValueFactory(new PropertyValueFactory<>("requestName"));
+        requestDegree.setCellValueFactory(new PropertyValueFactory<>("requestDegree"));
+        degreeIssued.setCellValueFactory(new PropertyValueFactory<>("degreeIssued"));
 
 
 
@@ -159,7 +157,7 @@ public boolean validToken(String token){
     }
 
 
-    public void manageRequestComboBoxBtn(ActionEvent actionEvent) {
+    public void manageRequestComboBoxBtn() {
         if(Constants.CURRENT_USER_TYPE.equalsIgnoreCase("admin")
                 ||Constants.CURRENT_USER_TYPE.equalsIgnoreCase("director") ) {
             if (requestsChoiceBox.getValue().equals("Pending"))
@@ -194,7 +192,7 @@ public boolean validToken(String token){
         setTableData();
         initialize();
     }
-    public void issueDegreeButton_onAction(ActionEvent event){
+    public void issueDegreeButton_onAction(){
         if(validToken(issueDegreeToken.getText()))
         if(issueDegree(issueDegreeToken.getText())) {
                Alert alert = new Alert(Alert.AlertType.INFORMATION);
