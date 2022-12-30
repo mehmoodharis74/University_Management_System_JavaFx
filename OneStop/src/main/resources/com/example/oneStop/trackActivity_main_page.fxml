@@ -38,7 +38,7 @@
                 <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
             </padding>
             <children>
-                <VBox alignment="CENTER" maxHeight="300.0" maxWidth="300.0" prefHeight="237.0" prefWidth="144.0" style="-fx-border-color: #3b84f6; -fx-border-radius: 5;">
+                <VBox alignment="CENTER" maxHeight="300.0" maxWidth="300.0" prefHeight="237.0" prefWidth="144.0" style="-fx-border-radius: 5; -fx-background-color: #f3f6f4; -fx-background-radius: 5;">
                     <children>
                         <Label alignment="CENTER" text="StudentID">
                             <font>
@@ -54,21 +54,21 @@
                             </VBox.margin>
                         </Label>
                     </children>
-                    <effect>
-                        <DropShadow>
-                            <color>
-                                <Color opacity="0.24657529592514038" />
-                            </color>
-                        </DropShadow>
-                    </effect>
                     <GridPane.margin>
                         <Insets />
                     </GridPane.margin>
                     <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                     </padding>
+               <effect>
+                  <DropShadow height="15.0" radius="7.0" width="15.0">
+                     <color>
+                        <Color red="0.10196078568696976" green="0.5098039507865906" blue="1.0" />
+                     </color>
+                  </DropShadow>
+               </effect>
                 </VBox>
-                <VBox alignment="CENTER" maxHeight="300.0" maxWidth="300.0" prefHeight="237.0" prefWidth="144.0" style="-fx-border-color: #3b84f6; -fx-border-radius: 5;" GridPane.columnIndex="1">
+                <VBox alignment="CENTER" maxHeight="300.0" maxWidth="300.0" prefHeight="237.0" prefWidth="144.0" style="-fx-border-radius: 5; -fx-background-color: #f3f6f4; -fx-background-radius: 5;" GridPane.columnIndex="1">
                     <children>
                         <Label alignment="CENTER" text="Track">
                             <font>
@@ -85,9 +85,9 @@
                         </Label>
                     </children>
                     <effect>
-                        <DropShadow>
+                        <DropShadow height="15.0" radius="7.0" width="15.0">
                             <color>
-                                <Color opacity="0.24657529592514038" />
+                                <Color red="0.10196078568696976" green="0.5098039507865906" blue="1.0" />
                             </color>
                         </DropShadow>
                     </effect>
@@ -95,7 +95,7 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                     </padding>
                 </VBox>
-                <VBox alignment="CENTER" maxHeight="300.0" maxWidth="300.0" prefHeight="237.0" prefWidth="144.0" style="-fx-border-color: #3b84f6; -fx-border-radius: 5;" GridPane.columnIndex="2">
+                <VBox alignment="CENTER" maxHeight="300.0" maxWidth="300.0" prefHeight="237.0" prefWidth="144.0" style="-fx-border-radius: 5; -fx-background-color: #f3f6f4; -fx-background-radius: 5;" GridPane.columnIndex="2">
                     <children>
                         <Label alignment="CENTER" text="Status">
                             <font>
@@ -112,9 +112,9 @@
                         </Label>
                     </children>
                     <effect>
-                        <DropShadow>
+                        <DropShadow height="15.0" radius="7.0" width="15.0">
                             <color>
-                                <Color opacity="0.24657529592514038" />
+                                <Color red="0.10196078568696976" green="0.5098039507865906" blue="1.0" />
                             </color>
                         </DropShadow>
                     </effect>
@@ -122,7 +122,7 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                     </padding>
                 </VBox>
-                <VBox alignment="CENTER" maxHeight="300.0" maxWidth="300.0" prefHeight="237.0" prefWidth="144.0" style="-fx-border-color: #3b84f6; -fx-border-radius: 5;" GridPane.columnIndex="3">
+                <VBox alignment="CENTER" maxHeight="300.0" maxWidth="300.0" prefHeight="237.0" prefWidth="144.0" style="-fx-border-radius: 5; -fx-background-color: #f3f6f4; -fx-background-radius: 5;" GridPane.columnIndex="3">
                     <children>
                         <Label alignment="CENTER" text="Starting Time">
                             <font>
@@ -139,9 +139,9 @@
                         </Label>
                     </children>
                     <effect>
-                        <DropShadow>
+                        <DropShadow height="15.0" radius="7.0" width="15.0">
                             <color>
-                                <Color opacity="0.24657529592514038" />
+                                <Color red="0.10196078568696976" green="0.5098039507865906" blue="1.0" />
                             </color>
                         </DropShadow>
                     </effect>
@@ -149,7 +149,7 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                     </padding>
                 </VBox>
-                <VBox alignment="CENTER" maxHeight="300.0" maxWidth="300.0" prefHeight="237.0" prefWidth="144.0" style="-fx-border-color: #3b84f6; -fx-border-radius: 5;" GridPane.columnIndex="4">
+                <VBox alignment="CENTER" maxHeight="300.0" maxWidth="300.0" prefHeight="237.0" prefWidth="144.0" style="-fx-border-radius: 5; -fx-background-color: #f3f6f4; -fx-background-radius: 5;" GridPane.columnIndex="4">
                     <children>
                         <Label alignment="CENTER" text="Completion Time" textAlignment="CENTER" wrapText="true">
                             <font>
@@ -166,9 +166,9 @@
                         </Label>
                     </children>
                     <effect>
-                        <DropShadow>
+                        <DropShadow height="15.0" radius="7.0" width="15.0">
                             <color>
-                                <Color opacity="0.24657529592514038" />
+                                <Color red="0.10196078568696976" green="0.5098039507865906" blue="1.0" />
                             </color>
                         </DropShadow>
                     </effect>
@@ -176,7 +176,7 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                     </padding>
                 </VBox>
-                <VBox alignment="CENTER" maxHeight="300.0" maxWidth="300.0" prefHeight="237.0" prefWidth="144.0" style="-fx-border-color: #3b84f6; -fx-border-radius: 5;" GridPane.columnIndex="5">
+                <VBox alignment="CENTER" maxHeight="300.0" maxWidth="300.0" prefHeight="237.0" prefWidth="144.0" style="-fx-border-radius: 5; -fx-background-radius: 5; -fx-background-color: #f3f6f4;" GridPane.columnIndex="5">
                     <children>
                         <Label alignment="CENTER" text="Finance Decision" textAlignment="CENTER" wrapText="true">
                             <font>
@@ -193,9 +193,9 @@
                         </Label>
                     </children>
                     <effect>
-                        <DropShadow>
+                        <DropShadow height="15.0" radius="7.0" width="15.0">
                             <color>
-                                <Color opacity="0.24657529592514038" />
+                                <Color red="0.10196078568696976" green="0.5098039507865906" blue="1.0" />
                             </color>
                         </DropShadow>
                     </effect>
@@ -203,7 +203,7 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                     </padding>
                 </VBox>
-                <VBox alignment="CENTER" maxHeight="300.0" maxWidth="300.0" prefHeight="237.0" prefWidth="144.0" style="-fx-border-color: #3b84f6; -fx-border-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <VBox alignment="CENTER" maxHeight="300.0" maxWidth="300.0" prefHeight="237.0" prefWidth="144.0" style="-fx-border-radius: 5; -fx-background-radius: 5; -fx-background-color: #f3f6f4;" GridPane.columnIndex="1" GridPane.rowIndex="1">
                     <children>
                         <Label alignment="CENTER" text="FYP Decision">
                             <font>
@@ -220,9 +220,9 @@
                         </Label>
                     </children>
                     <effect>
-                        <DropShadow>
+                        <DropShadow height="15.0" radius="7.0" width="15.0">
                             <color>
-                                <Color opacity="0.24657529592514038" />
+                                <Color red="0.10196078568696976" green="0.5098039507865906" blue="1.0" />
                             </color>
                         </DropShadow>
                     </effect>
@@ -230,7 +230,7 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                     </padding>
                 </VBox>
-                <VBox alignment="CENTER" maxHeight="300.0" maxWidth="300.0" prefHeight="237.0" prefWidth="144.0" style="-fx-border-color: #3b84f6; -fx-border-radius: 5;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                <VBox alignment="CENTER" maxHeight="300.0" maxWidth="300.0" prefHeight="237.0" prefWidth="144.0" style="-fx-border-radius: 5; -fx-background-radius: 5; -fx-background-color: #f3f6f4;" GridPane.columnIndex="2" GridPane.rowIndex="1">
                     <children>
                         <Label alignment="CENTER" text="FYP Comment">
                             <font>
@@ -247,9 +247,9 @@
                         </Label>
                     </children>
                     <effect>
-                        <DropShadow>
+                        <DropShadow height="15.0" radius="7.0" width="15.0">
                             <color>
-                                <Color opacity="0.24657529592514038" />
+                                <Color red="0.10196078568696976" green="0.5098039507865906" blue="1.0" />
                             </color>
                         </DropShadow>
                     </effect>
@@ -257,7 +257,7 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                     </padding>
                 </VBox>
-                <VBox alignment="CENTER" maxHeight="300.0" maxWidth="300.0" prefHeight="237.0" prefWidth="144.0" style="-fx-border-color: #3b84f6; -fx-border-radius: 5;" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                <VBox alignment="CENTER" maxHeight="300.0" maxWidth="300.0" prefHeight="237.0" prefWidth="144.0" style="-fx-border-radius: 5; -fx-background-color: #f3f6f4; -fx-background-radius: 5;" GridPane.columnIndex="3" GridPane.rowIndex="1">
                     <children>
                         <Label alignment="CENTER" text="Admin Signature" textAlignment="CENTER" wrapText="true">
                             <font>
@@ -274,9 +274,9 @@
                         </Label>
                     </children>
                     <effect>
-                        <DropShadow>
+                        <DropShadow height="15.0" radius="7.0" width="15.0">
                             <color>
-                                <Color opacity="0.24657529592514038" />
+                                <Color red="0.10196078568696976" green="0.5098039507865906" blue="1.0" />
                             </color>
                         </DropShadow>
                     </effect>
@@ -284,7 +284,7 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                     </padding>
                 </VBox>
-                <VBox alignment="CENTER" maxHeight="300.0" maxWidth="300.0" prefHeight="237.0" prefWidth="144.0" style="-fx-border-color: #3b84f6; -fx-border-radius: 5;" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                <VBox alignment="CENTER" maxHeight="300.0" maxWidth="300.0" prefHeight="237.0" prefWidth="144.0" style="-fx-border-radius: 5; -fx-background-color: #f3f6f4; -fx-background-radius: 5;" GridPane.columnIndex="4" GridPane.rowIndex="1">
                     <children>
                         <Label alignment="CENTER" text="Director Signature" textAlignment="CENTER" wrapText="true">
                             <font>
@@ -301,9 +301,9 @@
                         </Label>
                     </children>
                     <effect>
-                        <DropShadow>
+                        <DropShadow height="15.0" radius="7.0" width="15.0">
                             <color>
-                                <Color opacity="0.24657529592514038" />
+                                <Color red="0.10196078568696976" green="0.5098039507865906" blue="1.0" />
                             </color>
                         </DropShadow>
                     </effect>
@@ -311,7 +311,7 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                     </padding>
                 </VBox>
-                <VBox alignment="CENTER" maxHeight="300.0" maxWidth="300.0" prefHeight="237.0" prefWidth="144.0" style="-fx-border-color: #3b84f6; -fx-border-radius: 5;" GridPane.rowIndex="1">
+                <VBox alignment="CENTER" maxHeight="300.0" maxWidth="300.0" prefHeight="237.0" prefWidth="144.0" style="-fx-border-radius: 5; -fx-background-radius: 5; -fx-background-color: #f3f6f4;" GridPane.rowIndex="1">
                     <children>
                         <Label alignment="CENTER" text="Finance Comment" textAlignment="CENTER" wrapText="true">
                             <font>
@@ -328,9 +328,9 @@
                         </Label>
                     </children>
                     <effect>
-                        <DropShadow>
+                        <DropShadow height="15.0" radius="7.0" width="15.0">
                             <color>
-                                <Color opacity="0.24657529592514038" />
+                                <Color red="0.10196078568696976" green="0.5098039507865906" blue="1.0" />
                             </color>
                         </DropShadow>
                     </effect>
