@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="591.0" prefWidth="837.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oneStop.Controller.DegreePage">
+    <top>
+        <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="837.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+            <children>
+            <Label fx:id="backArrow" onMouseClicked="#backArrow_onClick" textAlignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/backArrow.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+                <Label contentDisplay="CENTER" text="ONESTOP" textFill="#03ff78">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets left="20.0" />
+                    </HBox.margin>
+                </Label>
+                <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                    <children>
+                        <Label fx:id="navName" alignment="CENTER" text="Name" textAlignment="CENTER" textFill="WHITE">
+                            <padding>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </padding>
+                            <HBox.margin>
+                                <Insets right="20.0" />
+                            </HBox.margin>
+                        </Label>
+                        <Button fx:id="logoutButton" alignment="CENTER" mnemonicParsing="false" onAction="#logOut_onAction" style="-fx-background-color: #3b82f6;" text="Logout" textAlignment="CENTER" textFill="WHITE">
+                            <HBox.margin>
+                                <Insets right="20.0" />
+                            </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+        </HBox>
+    </top>
+   <center>
+      <GridPane alignment="TOP_CENTER" prefHeight="479.0" prefWidth="837.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="476.0" prefWidth="837.0" style="-fx-background-color: white;">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="413.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/bismillah.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="NATIONAL UNIVERSITY" textFill="#836969" textOverrun="CLIP" wrapText="true">
+                     <VBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Garamond Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label text="of computer and emerging science" textFill="#836969">
+                     <font>
+                        <Font name="Garamond" size="30.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="69.0" fitWidth="91.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/fast_logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="This is to certify that">
+                     <font>
+                        <Font name="Vivaldi Italic" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="2.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="viewDegreeStudentName" text="NAME OF STUDENT">
+                     <font>
+                        <Font name="Times New Roman" size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </Label>
+                  <Label text="has been admitted to the degree of">
+                     <font>
+                        <Font name="Vivaldi Italic" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="viewDegreeName" text="DEGREE NAME">
+                     <font>
+                        <Font name="Times New Roman" size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </Label>
+                  <Label text="With All Humorous, previliegs and responsibilites this award is represnted to student of fast national university of computer and emerging science" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Vivaldi Italic" size="22.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <ImageView fitHeight="81.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                     <VBox.margin>
+                        <Insets bottom="-60.0" top="10.0" />
+                     </VBox.margin>
+                     <image>
+                        <Image url="@../../../images/stamp.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="54.0" fitWidth="120.0" layoutX="404.0" layoutY="421.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/dir_sig.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="-80.0" left="-630.0" top="10.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Line endX="100.0" startX="-100.0">
+                     <cursor>
+                        <Cursor fx:constant="CROSSHAIR" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets left="-600.0" top="85.0" />
+                     </VBox.margin>
+                  </Line>
+                  <Line endX="100.0" startX="-100.0">
+                     <cursor>
+                        <Cursor fx:constant="CROSSHAIR" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets left="590.0" top="-2.0" />
+                     </VBox.margin>
+                  </Line>
+                  <Label text="Admin">
+                     <VBox.margin>
+                        <Insets left="-620.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets top="3.0" />
+                     </padding>
+                  </Label>
+                  <Label text="Director">
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets top="3.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets left="600.0" top="-24.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ImageView fitHeight="54.0" fitWidth="120.0" layoutX="54.0" layoutY="421.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/dir_sig.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets left="600.0" top="-72.0" />
+                     </VBox.margin>
+                  </ImageView>
+               </children>
+            </VBox>
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>
