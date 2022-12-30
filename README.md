@@ -2,28 +2,43 @@
 
 OneStop is a desktop application for universities to manage degree issuance requests, transcript generation requests, and much more. It is built using JavaFX and requires Xampp and a database to be set up before use.
 
-Features:-
-- Manage degree issuance requests
-- Generate transcripts
-- Other university management features
+# Features:  
+  Student:
+  - Apply For Degree
+  - Apply For Transcipt
+  - Track Your Activity
+  - Submit You Complain
+  - Apply For Fee Installments
+  - Find Your Degree, and Transcript
+  
+  Admin:
+  - Manage Requests (Degree, Trancript)
+  - Notify Users (FYP Committee, Finance, Director)
+  - Issue Documents (Degree, Transcript)
+  
+  Director, Fyp/Finance Committee:
+  - Manage degree issuance requests
+  - Apporved/Reject Degree Requests
+  - Generate Fees Installment Plans (Finance)
 
-Installation:-
+  Other university management features
+
+# Installation Guide:
 - Download and install Xampp.
-- Create a database called 'onestop'.
-- Create tables and insert data using the provided SQL queries file.
-- Open the project in your preferred IDE (IntelliJ in this case).
-- Import the provided SQL connector.
+- Create a database in Xamp by importing database.sql file.
+- Open the project in your preferred IDE (IntelliJ in my case).
+- Import the provided JDBC connector (Availabe in Code).
 - Set the password in the sqlconnection.java file to match your database. For Xampp, leave it empty.
-- Run the app.
+- Run the MainApplication.java file.
+
 Note:-
-- If you are not familiar with importing SQL connectors or setting passwords in the MySqlConnector.java file,
+- If you are not familiar with importing mySQL connectors or setting passwords in the MySqlConnector.java file,
 you can refer to online resources or consult a developer for assistance.
-- If you find any kind or error drop the comment. You can also fix it and improve this app.
+- If you find any kind of error drop the comment or email me. You can also fix and improve this app.
 
 Thanks.
 
-
-
+# Images
 
 ![1](https://user-images.githubusercontent.com/70471936/210071907-bf2ee1c6-4be1-4440-a147-a40b176ecb74.png)
 ![2](https://user-images.githubusercontent.com/70471936/210071914-2a796f67-2557-41f4-8d94-053974318a1f.png)
