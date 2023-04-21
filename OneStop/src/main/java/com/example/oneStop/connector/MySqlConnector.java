@@ -5,7 +5,7 @@ import java.sql.*;
 public class MySqlConnector {
     String url = "jdbc:mysql://localhost:3306/oneStop";
     String user = "root";
-    String password = "";
+    String password = "root123";
     Connection connection;
 
     public MySqlConnector(Connection connection) throws SQLException {
