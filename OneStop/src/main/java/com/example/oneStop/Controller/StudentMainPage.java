@@ -23,7 +23,7 @@ public class StudentMainPage extends OneStop {
     @FXML
 Label navName;
 @FXML
-    VBox findDegreeVBox,ActivityTrackingVBox,ApplyForDegreeVBox;
+    VBox findDegreeVBox,ApplyForDegreeVBox;
 
     public void initialize(){
         if(!Constants.CURRENT_USER_NAME.isEmpty())
@@ -32,13 +32,13 @@ Label navName;
         if(getDegreeRequestStatus(String.valueOf(Constants.CURRENT_USER_ID))){
             ApplyForDegreeVBox.setDisable(true);
             findDegreeVBox.setDisable(true);
-            ActivityTrackingVBox.setDisable(false);
+           // ActivityTrackingVBox.setDisable(false);
 
         }
         else {
             ApplyForDegreeVBox.setDisable(false);
             findDegreeVBox.setDisable(true);
-            ActivityTrackingVBox.setDisable(true);
+           // ActivityTrackingVBox.setDisable(true);
         }
         findDegreeVBox.setDisable(!isDegreeSaved(String.valueOf(Constants.CURRENT_USER_ID)));
     }
