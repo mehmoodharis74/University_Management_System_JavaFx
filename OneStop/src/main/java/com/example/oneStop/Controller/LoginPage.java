@@ -26,7 +26,9 @@ public class LoginPage extends OneStop {
         if(validDataInput()) {
             if(verifyUserLogin(login_email_input_field.getText(), login_password_input_field.getText(), user_choice_box.getValue())){
                 if(user_choice_box.getValue().equals("Student")){
-                    pageLoader("student_main_page.fxml");
+                    //For limited functionalities for students (only apply for degree and transcript)
+                    pageLoader("student_main_page_limited.fxml");
+                    //pageLoader("student_main_page.fxml");
 
                 }
                 else if(user_choice_box.getValue().equals("Admin")){
